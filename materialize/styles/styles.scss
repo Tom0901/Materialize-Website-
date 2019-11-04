@@ -1,0 +1,36 @@
+@import "mixins";
+@import "vars";
+@import "Buttons";
+@import "fonts";
+
+//centering items//
+.card-panel {
+  @include flexCenter(column);
+}
+
+//general styles//
+#purple-card {
+  background-color: #7d6199;
+  padding-bottom: none !important;
+  color: #fff;
+}
+
+#h3 {
+  padding-top: 10vh !important;
+}
+
+.responsive-img-wrapper {
+  img {
+    width: 100vw;
+  }
+}
+
+//centering the map//
+#map {
+  height: 90vh;
+  width: 90vw;
+}
+
+.map-wrapper {
+  @include flexCenter(column);
+}

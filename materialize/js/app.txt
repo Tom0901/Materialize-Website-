@@ -1,0 +1,33 @@
+//global constants//
+const input = document.getElementById("task-3");
+
+//Event listeners//
+function loadEventListeners() {
+  document.addEventListener("DOMContentLoaded", retrieveMessage);
+}
+loadEventListeners();
+
+//store message in local storage//
+document.querySelector("form").addEventListener("submit", e => {
+  const data = input.value;
+  console.log(data);
+  localStorage.setItem("message", data);
+  input.value = "";
+  e.preventDefault();
+});
+
+//retrieve message//
+function retrieveMessage() {
+  if (localStorage.getItem("message") === null) {
+  } else {
+    const label3 = (document.getElementById("label-3").textContent = "");
+    const oldMessage = localStorage.getItem("message");
+    console.log(JSON.stringify(oldMessage));
+    input.value = oldMessage;
+  }
+}
+//bolding the headline// 
+
+const Logo1 = document.querySelector('.wrapper');
+div.innerHTML= `<b>New</b>Company`;
+/*div.innerText.style.fontStlye= "italic";*/
